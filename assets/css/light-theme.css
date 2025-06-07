@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #005f73;
+    --secondary-color: #0a9396;
+    --accent-color: #ee9b00;
+    --bg-color: #FFFFFF;
+    --text-color: #313233;
+    --text-secondary: #666;
+    --heading-color: #222;
+    --card-bg: #FFFFFF;
+    --card-border: #e0e0e0;
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --button-text: #FFFFFF;
+    --link-color: #005f73;
+}
