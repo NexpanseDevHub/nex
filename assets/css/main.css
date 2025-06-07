@@ -1,1 +1,152 @@
+/* Base Styles */
+:root {
+    --border-radius: 12px;
+    --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tech UI Components */
+.tech-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tech-button.primary {
+    background-color: var(--primary-color);
+    color: var(--button-text);
+}
+
+.tech-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.tech-button.large {
+    padding: 16px 32px;
+    font-size: 18px;
+}
+
+.tech-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+.tech-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    transition: var(--transition);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--box-shadow);
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.tech-card-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.tech-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--heading-color);
+}
+
+.tech-card-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.tech-card-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.tech-card-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Layout Styles */
+.tech-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    transition: var(--transition);
+}
+
+.tech-hero {
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tech-section-subtitle {
+    font-size: 18px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: var(--text-secondary);
+}
+
+.tech-highlight {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tech-section-title {
+        font-size: 28px;
+    }
+    
+    .tech-button {
+        padding: 10px 20px;
+    }
+}
